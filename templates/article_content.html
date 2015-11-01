@@ -9,10 +9,11 @@
                 </h2>
                 {% endif %}
 
-                {{ article.summary }}
+                {{ article.content }}
                 <div class="clear"></div>
 
                 <div class="info">
+                    <a href="{{ SITEURL }}/{{ article.url }}">posted on {{ article.date.strftime("%b %d, %Y") }}</a>
                     {% if article.category.name != "misc" %}
                     &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
                     {% endif %}
